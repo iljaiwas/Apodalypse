@@ -1,0 +1,6 @@
+# A simple barebones Podfile for setting up a Networking + CoreData app. 
+
+platform :ios, '7.0'
+
+pod 'AFNetworking',     '~> 2'
+pod 'MagicalRecord',	'~> 2.0'

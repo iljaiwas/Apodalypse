@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BAFA10AFFC84358BED46227 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5403A30E94E1B951FE889 /* libPods.a */; };
 		4DEAEA4F18A03C560071482E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEAEA4E18A03C560071482E /* Cocoa.framework */; };
 		4DEAEA5918A03C560071482E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEA5718A03C560071482E /* InfoPlist.strings */; };
 		4DEAEA5B18A03C560071482E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA5A18A03C560071482E /* main.m */; };
@@ -19,6 +20,19 @@
 		4DEAEA7218A03C560071482E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEAEA4E18A03C560071482E /* Cocoa.framework */; };
 		4DEAEA7A18A03C560071482E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEA7818A03C560071482E /* InfoPlist.strings */; };
 		4DEAEA7C18A03C560071482E /* ApodalypseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA7B18A03C560071482E /* ApodalypseTests.m */; };
+		4DEAEA8718A03CA90071482E /* APPodCatalogWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8618A03CA90071482E /* APPodCatalogWindowController.m */; };
+		4DEAEA8918A03CDF0071482E /* APPodCatalogWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8818A03CDF0071482E /* APPodCatalogWindowController.xib */; };
+		4DEAEA8C18A03FC60071482E /* APAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8B18A03FC60071482E /* APAppDelegate.m */; };
+		4DEAEAB818A3D0670071482E /* APLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEAB718A3D0670071482E /* APLine.m */; };
+		4DEAEABB18A3D1430071482E /* APPlatformLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEABA18A3D1430071482E /* APPlatformLine.m */; };
+		4DEAEABE18A3D1980071482E /* APEmptyLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEABD18A3D1980071482E /* APEmptyLine.m */; };
+		4DEAEAC418A3DD990071482E /* APPodLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEAC318A3DD990071482E /* APPodLine.m */; };
+		4DEAEAD018A52B5A0071482E /* APPodfileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEACF18A52B5A0071482E /* APPodfileParser.m */; };
+		4DEAEAD318A52F9A0071482E /* APPlatformLine.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEAD218A52F9A0071482E /* APPlatformLine.txt */; };
+		4DEAEAD718A57FD50071482E /* APRegexpLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEAD618A57FD50071482E /* APRegexpLine.m */; };
+		4DEAEAD918A5842B0071482E /* APPodLine.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEAD818A5842B0071482E /* APPodLine.txt */; };
+		4DEAEADC18A590280071482E /* APCommentLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEADB18A590280071482E /* APCommentLine.m */; };
+		4DEAEADE18A5907C0071482E /* APCommentLine.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEADD18A5907C0071482E /* APCommentLine.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +66,30 @@
 		4DEAEA7718A03C560071482E /* ApodalypseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApodalypseTests-Info.plist"; sourceTree = "<group>"; };
 		4DEAEA7918A03C560071482E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4DEAEA7B18A03C560071482E /* ApodalypseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApodalypseTests.m; sourceTree = "<group>"; };
+		4DEAEA8518A03CA90071482E /* APPodCatalogWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPodCatalogWindowController.h; sourceTree = "<group>"; };
+		4DEAEA8618A03CA90071482E /* APPodCatalogWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPodCatalogWindowController.m; sourceTree = "<group>"; };
+		4DEAEA8818A03CDF0071482E /* APPodCatalogWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APPodCatalogWindowController.xib; sourceTree = "<group>"; };
+		4DEAEA8A18A03FC60071482E /* APAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAppDelegate.h; sourceTree = "<group>"; };
+		4DEAEA8B18A03FC60071482E /* APAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAppDelegate.m; sourceTree = "<group>"; };
+		4DEAEAB618A3D0670071482E /* APLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLine.h; sourceTree = "<group>"; };
+		4DEAEAB718A3D0670071482E /* APLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLine.m; sourceTree = "<group>"; };
+		4DEAEAB918A3D1430071482E /* APPlatformLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPlatformLine.h; sourceTree = "<group>"; };
+		4DEAEABA18A3D1430071482E /* APPlatformLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPlatformLine.m; sourceTree = "<group>"; };
+		4DEAEABC18A3D1980071482E /* APEmptyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEmptyLine.h; sourceTree = "<group>"; };
+		4DEAEABD18A3D1980071482E /* APEmptyLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEmptyLine.m; sourceTree = "<group>"; };
+		4DEAEAC218A3DD990071482E /* APPodLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPodLine.h; sourceTree = "<group>"; };
+		4DEAEAC318A3DD990071482E /* APPodLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPodLine.m; sourceTree = "<group>"; };
+		4DEAEACE18A52B5A0071482E /* APPodfileParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPodfileParser.h; sourceTree = "<group>"; };
+		4DEAEACF18A52B5A0071482E /* APPodfileParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPodfileParser.m; sourceTree = "<group>"; };
+		4DEAEAD218A52F9A0071482E /* APPlatformLine.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = APPlatformLine.txt; path = "Regexp Patterns/APPlatformLine.txt"; sourceTree = "<group>"; };
+		4DEAEAD518A57FD50071482E /* APRegexpLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRegexpLine.h; sourceTree = "<group>"; };
+		4DEAEAD618A57FD50071482E /* APRegexpLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRegexpLine.m; sourceTree = "<group>"; };
+		4DEAEAD818A5842B0071482E /* APPodLine.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = APPodLine.txt; path = "Regexp Patterns/APPodLine.txt"; sourceTree = "<group>"; };
+		4DEAEADA18A590280071482E /* APCommentLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCommentLine.h; sourceTree = "<group>"; };
+		4DEAEADB18A590280071482E /* APCommentLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCommentLine.m; sourceTree = "<group>"; };
+		4DEAEADD18A5907C0071482E /* APCommentLine.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = APCommentLine.txt; path = "Regexp Patterns/APCommentLine.txt"; sourceTree = "<group>"; };
+		82E5403A30E94E1B951FE889 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74341AD18C04C949602A45A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEAEA4F18A03C560071482E /* Cocoa.framework in Frameworks */,
+				3BAFA10AFFC84358BED46227 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +121,7 @@
 				4DEAEA7518A03C560071482E /* ApodalypseTests */,
 				4DEAEA4D18A03C560071482E /* Frameworks */,
 				4DEAEA4C18A03C560071482E /* Products */,
+				F74341AD18C04C949602A45A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +140,7 @@
 				4DEAEA4E18A03C560071482E /* Cocoa.framework */,
 				4DEAEA7018A03C560071482E /* XCTest.framework */,
 				4DEAEA5018A03C560071482E /* Other Frameworks */,
+				82E5403A30E94E1B951FE889 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,12 +158,21 @@
 		4DEAEA5418A03C560071482E /* Apodalypse */ = {
 			isa = PBXGroup;
 			children = (
+				4DEAEAD118A52F610071482E /* Regexp Patterns */,
 				4DEAEA6018A03C560071482E /* APDocument.h */,
 				4DEAEA6118A03C560071482E /* APDocument.m */,
 				4DEAEA6318A03C560071482E /* APDocument.xib */,
 				4DEAEA6618A03C560071482E /* MainMenu.xib */,
 				4DEAEA6918A03C560071482E /* Images.xcassets */,
 				4DEAEA5518A03C560071482E /* Supporting Files */,
+				4DEAEA8518A03CA90071482E /* APPodCatalogWindowController.h */,
+				4DEAEA8618A03CA90071482E /* APPodCatalogWindowController.m */,
+				4DEAEA8818A03CDF0071482E /* APPodCatalogWindowController.xib */,
+				4DEAEA8A18A03FC60071482E /* APAppDelegate.h */,
+				4DEAEA8B18A03FC60071482E /* APAppDelegate.m */,
+				4DEAEAD418A57FB30071482E /* Data Model */,
+				4DEAEACE18A52B5A0071482E /* APPodfileParser.h */,
+				4DEAEACF18A52B5A0071482E /* APPodfileParser.m */,
 			);
 			path = Apodalypse;
 			sourceTree = "<group>";
@@ -157,6 +207,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4DEAEAD118A52F610071482E /* Regexp Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				4DEAEADD18A5907C0071482E /* APCommentLine.txt */,
+				4DEAEAD218A52F9A0071482E /* APPlatformLine.txt */,
+				4DEAEAD818A5842B0071482E /* APPodLine.txt */,
+			);
+			name = "Regexp Patterns";
+			sourceTree = "<group>";
+		};
+		4DEAEAD418A57FB30071482E /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DEAEAB618A3D0670071482E /* APLine.h */,
+				4DEAEAB718A3D0670071482E /* APLine.m */,
+				4DEAEAB918A3D1430071482E /* APPlatformLine.h */,
+				4DEAEABA18A3D1430071482E /* APPlatformLine.m */,
+				4DEAEABC18A3D1980071482E /* APEmptyLine.h */,
+				4DEAEABD18A3D1980071482E /* APEmptyLine.m */,
+				4DEAEAC218A3DD990071482E /* APPodLine.h */,
+				4DEAEAC318A3DD990071482E /* APPodLine.m */,
+				4DEAEAD518A57FD50071482E /* APRegexpLine.h */,
+				4DEAEAD618A57FD50071482E /* APRegexpLine.m */,
+				4DEAEADA18A590280071482E /* APCommentLine.h */,
+				4DEAEADB18A590280071482E /* APCommentLine.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DEAEA7F18A03C560071482E /* Build configuration list for PBXNativeTarget "Apodalypse" */;
 			buildPhases = (
+				8BE971D55FF8420A907D1675 /* Check Pods Manifest.lock */,
 				4DEAEA4718A03C560071482E /* Sources */,
 				4DEAEA4818A03C560071482E /* Frameworks */,
 				4DEAEA4918A03C560071482E /* Resources */,
+				8EA5158CA57844BFA74ABF02 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,7 +319,11 @@
 				4DEAEA6A18A03C560071482E /* Images.xcassets in Resources */,
 				4DEAEA6518A03C560071482E /* APDocument.xib in Resources */,
 				4DEAEA5F18A03C560071482E /* Credits.rtf in Resources */,
+				4DEAEA8918A03CDF0071482E /* APPodCatalogWindowController.xib in Resources */,
+				4DEAEADE18A5907C0071482E /* APCommentLine.txt in Resources */,
+				4DEAEAD318A52F9A0071482E /* APPlatformLine.txt in Resources */,
 				4DEAEA6818A03C560071482E /* MainMenu.xib in Resources */,
+				4DEAEAD918A5842B0071482E /* APPodLine.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,13 +337,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8BE971D55FF8420A907D1675 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA5158CA57844BFA74ABF02 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DEAEA4718A03C560071482E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEAEABE18A3D1980071482E /* APEmptyLine.m in Sources */,
+				4DEAEAC418A3DD990071482E /* APPodLine.m in Sources */,
+				4DEAEA8718A03CA90071482E /* APPodCatalogWindowController.m in Sources */,
+				4DEAEABB18A3D1430071482E /* APPlatformLine.m in Sources */,
+				4DEAEAD018A52B5A0071482E /* APPodfileParser.m in Sources */,
 				4DEAEA5B18A03C560071482E /* main.m in Sources */,
+				4DEAEAB818A3D0670071482E /* APLine.m in Sources */,
 				4DEAEA6218A03C560071482E /* APDocument.m in Sources */,
+				4DEAEADC18A590280071482E /* APCommentLine.m in Sources */,
+				4DEAEA8C18A03FC60071482E /* APAppDelegate.m in Sources */,
+				4DEAEAD718A57FD50071482E /* APRegexpLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -387,13 +514,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		4DEAEA8018A03C560071482E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F74341AD18C04C949602A45A /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -407,6 +535,7 @@
 		};
 		4DEAEA8118A03C560071482E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F74341AD18C04C949602A45A /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -477,6 +606,7 @@
 				4DEAEA8118A03C560071482E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DEAEA8218A03C560071482E /* Build configuration list for PBXNativeTarget "ApodalypseTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +615,7 @@
 				4DEAEA8418A03C560071482E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

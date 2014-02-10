@@ -1,0 +1,9 @@
+# Tested, lightweight networking with no Core Data
+
+platform :ios, '7.0'
+
+pod 'MKNetworkKit', '~> 0.85.1'
+
+target :Tests, :exclusive => true do
+    pod 'Kiwi'
+end

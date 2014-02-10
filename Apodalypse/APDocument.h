@@ -10,4 +10,6 @@
 
 @interface APDocument : NSDocument
 
+@property (strong) IBOutlet NSTextView *textView;
+
 @end
