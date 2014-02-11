@@ -33,6 +33,7 @@
 			if ([responseObject isKindOfClass:[NSArray class]])
 			{
 				 self.foundPodsArrayController.content = responseObject;
+				NSLog (@"%@", responseObject);
 			}
 			else
 			{

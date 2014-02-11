@@ -25,7 +25,6 @@
 		4DEAEA8C18A03FC60071482E /* APAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8B18A03FC60071482E /* APAppDelegate.m */; };
 		4DEAEAB818A3D0670071482E /* APLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEAB718A3D0670071482E /* APLine.m */; };
 		4DEAEABB18A3D1430071482E /* APPlatformLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEABA18A3D1430071482E /* APPlatformLine.m */; };
-		4DEAEABE18A3D1980071482E /* APEmptyLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEABD18A3D1980071482E /* APEmptyLine.m */; };
 		4DEAEAC418A3DD990071482E /* APPodLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEAC318A3DD990071482E /* APPodLine.m */; };
 		4DEAEAD018A52B5A0071482E /* APPodfileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEACF18A52B5A0071482E /* APPodfileParser.m */; };
 		4DEAEAD318A52F9A0071482E /* APPlatformLine.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEAD218A52F9A0071482E /* APPlatformLine.txt */; };
@@ -75,8 +74,6 @@
 		4DEAEAB718A3D0670071482E /* APLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLine.m; sourceTree = "<group>"; };
 		4DEAEAB918A3D1430071482E /* APPlatformLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPlatformLine.h; sourceTree = "<group>"; };
 		4DEAEABA18A3D1430071482E /* APPlatformLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPlatformLine.m; sourceTree = "<group>"; };
-		4DEAEABC18A3D1980071482E /* APEmptyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEmptyLine.h; sourceTree = "<group>"; };
-		4DEAEABD18A3D1980071482E /* APEmptyLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEmptyLine.m; sourceTree = "<group>"; };
 		4DEAEAC218A3DD990071482E /* APPodLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPodLine.h; sourceTree = "<group>"; };
 		4DEAEAC318A3DD990071482E /* APPodLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPodLine.m; sourceTree = "<group>"; };
 		4DEAEACE18A52B5A0071482E /* APPodfileParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPodfileParser.h; sourceTree = "<group>"; };
@@ -224,8 +221,6 @@
 				4DEAEAB718A3D0670071482E /* APLine.m */,
 				4DEAEAB918A3D1430071482E /* APPlatformLine.h */,
 				4DEAEABA18A3D1430071482E /* APPlatformLine.m */,
-				4DEAEABC18A3D1980071482E /* APEmptyLine.h */,
-				4DEAEABD18A3D1980071482E /* APEmptyLine.m */,
 				4DEAEAC218A3DD990071482E /* APPodLine.h */,
 				4DEAEAC318A3DD990071482E /* APPodLine.m */,
 				4DEAEAD518A57FD50071482E /* APRegexpLine.h */,
@@ -375,7 +370,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DEAEABE18A3D1980071482E /* APEmptyLine.m in Sources */,
 				4DEAEAC418A3DD990071482E /* APPodLine.m in Sources */,
 				4DEAEA8718A03CA90071482E /* APPodCatalogWindowController.m in Sources */,
 				4DEAEABB18A3D1430071482E /* APPlatformLine.m in Sources */,

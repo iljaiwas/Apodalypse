@@ -10,14 +10,15 @@
 
 #import "APPodfileParser.h"
 #import "APPlatformLine.h"
-#import "APEmptyLine.h"
 #import "APPodLine.h"
 
-#import <ParseKit/ParseKit.h>
+#import "MACollectionUtilities.h"
 
 @interface APDocument ()
 
 @property (strong) NSArray *lines;
+
+@property (strong) IBOutlet NSArrayController *visibleLinesController;
 
 @end
 
@@ -46,6 +47,9 @@
 	// Add any code here that needs to be executed once the windowController has loaded the document's window.
 	
 	self.textView.string = [self podfileText];
+	
+	self.visibleLinesController.content = SELECT (self.lines, [obj isKindOfClass:[APPlatformLine class]]
+												  || [obj isKindOfClass:[APPodLine class]]);
 }
 
 + (BOOL)autosavesInPlace
@@ -67,12 +71,16 @@
 	NSString				*input = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 	
 	self.lines = [APPodfileParser parsedLinesFromPodfileString:input];
-	if (self.lines.count == 0)
-		return NO;
 		
+	if (NO == [self isValid])
+	{
+		return NO;
+	}
+	
+	
+	
 	return YES;
 }
-
 
 
 -(NSString*) podfileText
@@ -85,6 +93,29 @@
 	}
 		 
 	return [NSString stringWithString:podfileText];
+}
+
+- (BOOL) isValid
+{
+	if (self.lines.count == 0)
+		return NO;
+	
+	if (1 != SELECT (self.lines, [obj isKindOfClass:[APPlatformLine class]]).count)
+	{
+		return NO;
+	}
+	
+	return YES;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+	if (nil == tableColumn)
+		return nil;
+	
+	APLine *line = [self.visibleLinesController.arrangedObjects objectAtIndex:row];
+	
+	return [tableView makeViewWithIdentifier:NSStringFromClass([line class]) owner:self];
 }
 
 @end

@@ -9,7 +9,6 @@
 #import "APPodfileParser.h"
 
 #import "APPlatformLine.h"
-#import "APEmptyLine.h"
 #import "APPodLine.h"
 #import "APCommentLine.h"
 
@@ -35,7 +34,7 @@
 
 + (NSArray*) lineClassesToTry
 {
-	return @[[APPlatformLine class], [APEmptyLine class], [APPodLine class], [APCommentLine class]];
+	return @[[APPlatformLine class], [APPodLine class], [APCommentLine class]];
 }
 
 @end
