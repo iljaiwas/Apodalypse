@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="APPodCatalogWindowController">
+        <customObject id="-2" userLabel="File's Owner" customClass="APPodSpecCatalogWindowController">
             <connections>
                 <outlet property="foundPodsArrayController" destination="Ywp-Vt-33Q" id="dHH-bz-mCX"/>
                 <outlet property="foundPodsTableView" destination="PXW-ov-jIJ" id="Qh1-vV-kZo"/>
@@ -14,7 +14,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
-        <window title="Pod Catalog" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" frameAutosaveName="PodCatalog" animationBehavior="default" id="1">
+        <window title="PodSpec Catalog" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" frameAutosaveName="PodCatalog" animationBehavior="default" id="1" userLabel="Window - PodSpec Catalog">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -29,7 +29,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="156" id="TQU-GJ-J0G"/>
                         </constraints>
-                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" title="Search Pods" usesSingleLineMode="YES" bezelStyle="round" sendsSearchStringImmediately="YES" maximumRecents="10" recentsAutosaveName="CatalogSearchField" id="JbJ-Fs-0K2">
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search Pods" usesSingleLineMode="YES" bezelStyle="round" sendsSearchStringImmediately="YES" maximumRecents="10" recentsAutosaveName="CatalogSearchField" id="JbJ-Fs-0K2">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -114,6 +114,7 @@
                                     <connections>
                                         <binding destination="Ywp-Vt-33Q" name="content" keyPath="arrangedObjects" id="WTY-d3-0Da"/>
                                         <binding destination="Ywp-Vt-33Q" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="WTY-d3-0Da" id="gDf-G4-jeU"/>
+                                        <outlet property="dataSource" destination="-2" id="4Hy-pt-6AD"/>
                                     </connections>
                                 </tableView>
                             </subviews>

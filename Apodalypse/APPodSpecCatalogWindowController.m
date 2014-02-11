@@ -1,16 +1,16 @@
 //
-//  APPodSearchWindowController.m
+//  APPodSpecCatalogWindowController
 //  Apodalypse
 //
 //  Created by ilja on 03.02.14.
 //  Copyright (c) 2014 iwascoding GmbH. All rights reserved.
 //
 
-#import "APPodCatalogWindowController.h"
+#import "APPodSpecCatalogWindowController.h"
 
 #import "AFHTTPRequestOperationManager.h"
 
-@implementation APPodCatalogWindowController
+@implementation APPodSpecCatalogWindowController
 
 - (void) awakeFromNib
 {
@@ -58,6 +58,17 @@
 	{
 		[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:clickedPod[@"link"]]];
 	}
+}
+
+- (BOOL)tableView:(NSTableView *)aTableView writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard *)pboard
+{
+	NSArray *draggedPodSpecDicts = [[self.foundPodsArrayController arrangedObjects] objectsAtIndexes:rowIndexes];
+	NSData	*podSpecJSON = [NSJSONSerialization dataWithJSONObject:draggedPodSpecDicts
+														  options:0
+															error:nil];
+	[pboard setData:podSpecJSON forType:@"podSpecJSON"];
+	
+	return YES;
 }
 
 

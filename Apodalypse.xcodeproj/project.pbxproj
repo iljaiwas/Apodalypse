@@ -20,8 +20,8 @@
 		4DEAEA7218A03C560071482E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEAEA4E18A03C560071482E /* Cocoa.framework */; };
 		4DEAEA7A18A03C560071482E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEA7818A03C560071482E /* InfoPlist.strings */; };
 		4DEAEA7C18A03C560071482E /* ApodalypseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA7B18A03C560071482E /* ApodalypseTests.m */; };
-		4DEAEA8718A03CA90071482E /* APPodCatalogWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8618A03CA90071482E /* APPodCatalogWindowController.m */; };
-		4DEAEA8918A03CDF0071482E /* APPodCatalogWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8818A03CDF0071482E /* APPodCatalogWindowController.xib */; };
+		4DEAEA8718A03CA90071482E /* APPodSpecCatalogWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8618A03CA90071482E /* APPodSpecCatalogWindowController.m */; };
+		4DEAEA8918A03CDF0071482E /* APPodSpecCatalogWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8818A03CDF0071482E /* APPodSpecCatalogWindowController.xib */; };
 		4DEAEA8C18A03FC60071482E /* APAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA8B18A03FC60071482E /* APAppDelegate.m */; };
 		4DEAEAB818A3D0670071482E /* APLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEAB718A3D0670071482E /* APLine.m */; };
 		4DEAEABB18A3D1430071482E /* APPlatformLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEABA18A3D1430071482E /* APPlatformLine.m */; };
@@ -65,9 +65,9 @@
 		4DEAEA7718A03C560071482E /* ApodalypseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApodalypseTests-Info.plist"; sourceTree = "<group>"; };
 		4DEAEA7918A03C560071482E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4DEAEA7B18A03C560071482E /* ApodalypseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApodalypseTests.m; sourceTree = "<group>"; };
-		4DEAEA8518A03CA90071482E /* APPodCatalogWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPodCatalogWindowController.h; sourceTree = "<group>"; };
-		4DEAEA8618A03CA90071482E /* APPodCatalogWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPodCatalogWindowController.m; sourceTree = "<group>"; };
-		4DEAEA8818A03CDF0071482E /* APPodCatalogWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APPodCatalogWindowController.xib; sourceTree = "<group>"; };
+		4DEAEA8518A03CA90071482E /* APPodSpecCatalogWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPodSpecCatalogWindowController.h; sourceTree = "<group>"; };
+		4DEAEA8618A03CA90071482E /* APPodSpecCatalogWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPodSpecCatalogWindowController.m; sourceTree = "<group>"; };
+		4DEAEA8818A03CDF0071482E /* APPodSpecCatalogWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APPodSpecCatalogWindowController.xib; sourceTree = "<group>"; };
 		4DEAEA8A18A03FC60071482E /* APAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAppDelegate.h; sourceTree = "<group>"; };
 		4DEAEA8B18A03FC60071482E /* APAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAppDelegate.m; sourceTree = "<group>"; };
 		4DEAEAB618A3D0670071482E /* APLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLine.h; sourceTree = "<group>"; };
@@ -162,9 +162,9 @@
 				4DEAEA6618A03C560071482E /* MainMenu.xib */,
 				4DEAEA6918A03C560071482E /* Images.xcassets */,
 				4DEAEA5518A03C560071482E /* Supporting Files */,
-				4DEAEA8518A03CA90071482E /* APPodCatalogWindowController.h */,
-				4DEAEA8618A03CA90071482E /* APPodCatalogWindowController.m */,
-				4DEAEA8818A03CDF0071482E /* APPodCatalogWindowController.xib */,
+				4DEAEA8518A03CA90071482E /* APPodSpecCatalogWindowController.h */,
+				4DEAEA8618A03CA90071482E /* APPodSpecCatalogWindowController.m */,
+				4DEAEA8818A03CDF0071482E /* APPodSpecCatalogWindowController.xib */,
 				4DEAEA8A18A03FC60071482E /* APAppDelegate.h */,
 				4DEAEA8B18A03FC60071482E /* APAppDelegate.m */,
 				4DEAEAD418A57FB30071482E /* Data Model */,
@@ -314,7 +314,7 @@
 				4DEAEA6A18A03C560071482E /* Images.xcassets in Resources */,
 				4DEAEA6518A03C560071482E /* APDocument.xib in Resources */,
 				4DEAEA5F18A03C560071482E /* Credits.rtf in Resources */,
-				4DEAEA8918A03CDF0071482E /* APPodCatalogWindowController.xib in Resources */,
+				4DEAEA8918A03CDF0071482E /* APPodSpecCatalogWindowController.xib in Resources */,
 				4DEAEADE18A5907C0071482E /* APCommentLine.txt in Resources */,
 				4DEAEAD318A52F9A0071482E /* APPlatformLine.txt in Resources */,
 				4DEAEA6818A03C560071482E /* MainMenu.xib in Resources */,
@@ -371,7 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEAEAC418A3DD990071482E /* APPodLine.m in Sources */,
-				4DEAEA8718A03CA90071482E /* APPodCatalogWindowController.m in Sources */,
+				4DEAEA8718A03CA90071482E /* APPodSpecCatalogWindowController.m in Sources */,
 				4DEAEABB18A3D1430071482E /* APPlatformLine.m in Sources */,
 				4DEAEAD018A52B5A0071482E /* APPodfileParser.m in Sources */,
 				4DEAEA5B18A03C560071482E /* main.m in Sources */,

@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="APDocument">
             <connections>
+                <outlet property="podLinesTableView" destination="i90-0I-VrN" id="pfW-Ww-wim"/>
                 <outlet property="textView" destination="i5b-Zp-kex" id="waD-MO-Rpc"/>
                 <outlet property="visibleLinesController" destination="ve1-H8-UCA" id="BTB-0S-m7c"/>
                 <outlet property="window" destination="5" id="18"/>
@@ -171,27 +172,29 @@
                                                                                 </connections>
                                                                             </comboBoxCell>
                                                                         </comboBox>
-                                                                        <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUW-Gw-yhm">
-                                                                            <rect key="frame" x="109" y="6" width="181" height="22"/>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-Vk-l0g">
+                                                                            <rect key="frame" x="109" y="9" width="178" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JXs-SW-rxu">
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="gCI-X2-qub">
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <connections>
-                                                                                <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.name" id="knN-sk-fDY"/>
+                                                                                <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.name" id="K27-co-k7n"/>
                                                                             </connections>
                                                                         </textField>
                                                                     </subviews>
                                                                     <constraints>
+                                                                        <constraint firstItem="OMm-el-arf" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="8" id="7sI-jT-WEh"/>
                                                                         <constraint firstAttribute="trailing" secondItem="5Xr-Ej-Mfo" secondAttribute="trailing" constant="10" id="AHw-AM-y9i"/>
-                                                                        <constraint firstItem="oUW-Gw-yhm" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="6" id="N0T-mC-uiW"/>
+                                                                        <constraint firstItem="Vna-Gw-C5O" firstAttribute="leading" secondItem="xyc-Vk-l0g" secondAttribute="trailing" constant="13" id="JZt-fX-Ivr"/>
+                                                                        <constraint firstItem="OMm-el-arf" firstAttribute="leading" secondItem="Hrf-Dl-EUg" secondAttribute="leading" constant="11" id="M82-nj-kMw"/>
                                                                         <constraint firstItem="5Xr-Ej-Mfo" firstAttribute="leading" secondItem="Vna-Gw-C5O" secondAttribute="trailing" constant="8" id="ZGl-lw-ROf"/>
+                                                                        <constraint firstItem="xyc-Vk-l0g" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="8" id="a3h-7h-bWV"/>
+                                                                        <constraint firstItem="xyc-Vk-l0g" firstAttribute="leading" secondItem="OMm-el-arf" secondAttribute="trailing" constant="10" id="feV-de-Zzx"/>
                                                                         <constraint firstItem="Vna-Gw-C5O" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="8" id="nKj-OJ-uay"/>
                                                                         <constraint firstItem="5Xr-Ej-Mfo" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="6" id="u9q-DV-T3b"/>
-                                                                        <constraint firstItem="oUW-Gw-yhm" firstAttribute="leading" secondItem="OMm-el-arf" secondAttribute="trailing" constant="8" id="xSC-sZ-je1"/>
-                                                                        <constraint firstItem="Vna-Gw-C5O" firstAttribute="leading" secondItem="oUW-Gw-yhm" secondAttribute="trailing" constant="8" id="zpK-lD-WBA"/>
                                                                     </constraints>
                                                                 </tableCellView>
                                                             </prototypeCellViews>
@@ -200,6 +203,7 @@
                                                     <connections>
                                                         <binding destination="ve1-H8-UCA" name="content" keyPath="arrangedObjects" id="ESq-Mf-htR"/>
                                                         <binding destination="ve1-H8-UCA" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="ESq-Mf-htR" id="Yh5-aY-kV9"/>
+                                                        <outlet property="dataSource" destination="-2" id="eyS-ue-XzA"/>
                                                         <outlet property="delegate" destination="-2" id="ixv-uu-rC3"/>
                                                     </connections>
                                                 </tableView>

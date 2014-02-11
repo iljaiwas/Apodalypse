@@ -8,11 +8,11 @@
 
 #import "APAppDelegate.h"
 
-#import "APPodCatalogWindowController.h"
+#import "APPodSpecCatalogWindowController.h"
 
 @interface APAppDelegate ()
 
-@property (strong) APPodCatalogWindowController *catalogWindowController;
+@property (strong) APPodSpecCatalogWindowController *catalogWindowController;
 
 @end
 
@@ -22,7 +22,7 @@
 {
 	if (nil == self.catalogWindowController)
 	{
-		self.catalogWindowController = [[APPodCatalogWindowController alloc] initWithWindowNibName:@"APPodCatalogWindowController"];
+		self.catalogWindowController = [[APPodSpecCatalogWindowController alloc] initWithWindowNibName:@"APPodSpecCatalogWindowController"];
 	}
 	[self.catalogWindowController showWindow:sender];
 }

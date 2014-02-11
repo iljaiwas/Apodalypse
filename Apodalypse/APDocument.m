@@ -18,20 +18,25 @@
 
 @property (strong) NSArray *lines;
 
-@property (strong) IBOutlet NSArrayController *visibleLinesController;
+@property (strong) IBOutlet NSArrayController	*visibleLinesController;
+@property (strong) IBOutlet NSTableView			*podLinesTableView;
 
 @end
 
 @implementation APDocument
 
-- (id)init
+- (id) initWithType:(NSString *)typeName error:(NSError *__autoreleasing *)outError
 {
-    self = [super init];
-    if (self) {
-		// Add your subclass-specific initialization here.
-		self.lines = [NSMutableArray array];
-    }
-    return self;
+	self = [super initWithType:typeName error:outError];
+	if (self)
+	{
+		APPlatformLine *platformLine = [[APPlatformLine alloc] init];
+		
+		platformLine.platform = @"osx";
+		platformLine.sdkVersion = @"10.9";
+		self.lines = @[platformLine];
+	}
+	return self;
 }
 
 - (NSString *)windowNibName
@@ -41,15 +46,27 @@
 	return @"APDocument";
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *)aController
+- (void)updateVisibleLines
 {
-	[super windowControllerDidLoadNib:aController];
+	self.visibleLinesController.content = SELECT (self.lines, [obj isKindOfClass:[APPlatformLine class]]
+												  || [obj isKindOfClass:[APPodLine class]]);
+}
+
+- (void)updateTextView
+{
 	// Add any code here that needs to be executed once the windowController has loaded the document's window.
 	
 	self.textView.string = [self podfileText];
+}
+
+- (void)windowControllerDidLoadNib:(NSWindowController *)aController
+{
+	[super windowControllerDidLoadNib:aController];
+	[self updateTextView];
 	
-	self.visibleLinesController.content = SELECT (self.lines, [obj isKindOfClass:[APPlatformLine class]]
-												  || [obj isKindOfClass:[APPodLine class]]);
+	[self updateVisibleLines];
+	
+	[self.podLinesTableView registerForDraggedTypes:@[@"podSpecJSON"]];
 }
 
 + (BOOL)autosavesInPlace
@@ -59,11 +76,7 @@
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
 {
-	// Insert code here to write your document to data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning nil.
-	// You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-	NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
-	@throw exception;
-	return nil;
+	return [[self podfileText] dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
@@ -76,9 +89,6 @@
 	{
 		return NO;
 	}
-	
-	
-	
 	return YES;
 }
 
@@ -116,6 +126,78 @@
 	APLine *line = [self.visibleLinesController.arrangedObjects objectAtIndex:row];
 	
 	return [tableView makeViewWithIdentifier:NSStringFromClass([line class]) owner:self];
+}
+
+- (NSDragOperation)tableView:(NSTableView *)aTableView validateDrop:(id < NSDraggingInfo >)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)operation
+{
+	if (row == 0)
+	{
+		// disallow drops onto line 0 which we use for the plattform line
+		[aTableView setDropRow:1 dropOperation:NSTableViewDropAbove];
+	}
+	else
+	{
+		// only allow drops in between pod lines
+		[aTableView setDropRow:row dropOperation:NSTableViewDropAbove];
+	}
+
+	return NSDragOperationCopy;
+}
+
+- (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id < NSDraggingInfo >)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation
+{
+	NSData			*podSpecJSON = [[info draggingPasteboard] dataForType:@"podSpecJSON"];
+	NSArray			*draggedPodSpecDicts = [NSJSONSerialization JSONObjectWithData:podSpecJSON options:0 error:nil];
+	NSUInteger		insertionIndex;
+	
+	// compute insertion index in self.lines from drop index
+	if (row >= [self.visibleLinesController.arrangedObjects count])
+	{
+		insertionIndex = self.lines.count;
+	}
+	else
+	{
+		APLine *dropTargetLine = [self.visibleLinesController.arrangedObjects objectAtIndex:row];
+		
+		insertionIndex = [self.lines indexOfObject:dropTargetLine];
+	}
+	for (NSDictionary *podSpecDict in draggedPodSpecDicts)
+	{
+		APPodLine *podLine = [[APPodLine alloc] init];
+		
+		podLine.name = podSpecDict[@"id"];
+		[self insertPodLine:podLine atIndex:insertionIndex++];
+	}
+		
+	return YES;
+}
+
+- (void) insertPodLine:(APPodLine*) inPodLine atIndex:(NSUInteger) insertionIndex
+{
+	NSMutableArray	*mutableLines = [self.lines mutableCopy];
+
+	[[self.undoManager prepareWithInvocationTarget:self] removePodLineAtIndex:insertionIndex];
+	[self.undoManager setActionName:NSLocalizedString(@"Add Pod", @"size undo")];
+	
+	[mutableLines insertObject:inPodLine atIndex:insertionIndex];
+	
+	self.lines = [NSArray arrayWithArray:mutableLines];
+	[self updateVisibleLines];
+	[self updateTextView];
+}
+
+- (void) removePodLineAtIndex:(NSUInteger) inIndex
+{
+	APPodLine		*lineToRemove = [self.lines objectAtIndex:inIndex];
+	NSMutableArray	*mutableLines = [self.lines mutableCopy];
+
+	[[self.undoManager prepareWithInvocationTarget:self] insertPodLine:lineToRemove atIndex:inIndex];
+	[self.undoManager setActionName:NSLocalizedString(@"Remove Pod", @"size undo")];
+	
+	[mutableLines removeObject:lineToRemove];
+	self.lines = [NSArray arrayWithArray:mutableLines];
+	[self updateVisibleLines];
+	[self updateTextView];
 }
 
 @end

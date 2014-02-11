@@ -1,5 +1,5 @@
 //
-//  APPodCatalogWindowController
+//  APPodSpecCatalogWindowController
 //  Apodalypse
 //
 //  Created by ilja on 03.02.14.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface APPodCatalogWindowController : NSWindowController
+@interface APPodSpecCatalogWindowController : NSWindowController
 
 @property (strong) IBOutlet NSArrayController	*foundPodsArrayController;
 @property (strong) IBOutlet NSTableView			*foundPodsTableView;
