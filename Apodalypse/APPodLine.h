@@ -13,5 +13,6 @@
 @property (strong) NSString *name;
 @property (strong) NSString *versionModifier;
 @property (strong) NSString *version;
+@property (assign) BOOL		enabled;
 
 @end

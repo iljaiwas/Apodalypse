@@ -136,15 +136,6 @@
                                                                     <rect key="frame" x="1" y="37" width="502" height="34"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMm-el-arf">
-                                                                            <rect key="frame" x="9" y="9" width="94" height="17"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Pod Name:" id="Sql-Vi-TnV">
-                                                                                <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                            </textFieldCell>
-                                                                        </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-Gw-C5O">
                                                                             <rect key="frame" x="296" y="9" width="94" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -172,28 +163,28 @@
                                                                                 </connections>
                                                                             </comboBoxCell>
                                                                         </comboBox>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-Vk-l0g">
-                                                                            <rect key="frame" x="109" y="9" width="178" height="17"/>
+                                                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="rG0-vF-FPn">
+                                                                            <rect key="frame" x="11" y="8" width="281" height="18"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="gCI-X2-qub">
+                                                                            <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Y9R-i1-4FV">
+                                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                            </textFieldCell>
+                                                                            </buttonCell>
                                                                             <connections>
-                                                                                <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.name" id="K27-co-k7n"/>
+                                                                                <action selector="togglePodLineState:" target="-2" id="ra4-XS-tuc"/>
+                                                                                <binding destination="Hrf-Dl-EUg" name="title" keyPath="objectValue.name" id="I3F-gb-6Ux"/>
+                                                                                <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.enabled" id="3Be-r9-9cH"/>
                                                                             </connections>
-                                                                        </textField>
+                                                                        </button>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="OMm-el-arf" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="8" id="7sI-jT-WEh"/>
+                                                                        <constraint firstItem="Vna-Gw-C5O" firstAttribute="leading" secondItem="rG0-vF-FPn" secondAttribute="trailing" constant="8" id="5ey-nH-jef"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="rG0-vF-FPn" secondAttribute="bottom" constant="10" id="7nO-8k-ps9"/>
                                                                         <constraint firstAttribute="trailing" secondItem="5Xr-Ej-Mfo" secondAttribute="trailing" constant="10" id="AHw-AM-y9i"/>
-                                                                        <constraint firstItem="Vna-Gw-C5O" firstAttribute="leading" secondItem="xyc-Vk-l0g" secondAttribute="trailing" constant="13" id="JZt-fX-Ivr"/>
-                                                                        <constraint firstItem="OMm-el-arf" firstAttribute="leading" secondItem="Hrf-Dl-EUg" secondAttribute="leading" constant="11" id="M82-nj-kMw"/>
                                                                         <constraint firstItem="5Xr-Ej-Mfo" firstAttribute="leading" secondItem="Vna-Gw-C5O" secondAttribute="trailing" constant="8" id="ZGl-lw-ROf"/>
-                                                                        <constraint firstItem="xyc-Vk-l0g" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="8" id="a3h-7h-bWV"/>
-                                                                        <constraint firstItem="xyc-Vk-l0g" firstAttribute="leading" secondItem="OMm-el-arf" secondAttribute="trailing" constant="10" id="feV-de-Zzx"/>
                                                                         <constraint firstItem="Vna-Gw-C5O" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="8" id="nKj-OJ-uay"/>
+                                                                        <constraint firstItem="rG0-vF-FPn" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="10" id="okT-4k-dZA"/>
+                                                                        <constraint firstItem="rG0-vF-FPn" firstAttribute="leading" secondItem="Hrf-Dl-EUg" secondAttribute="leading" constant="13" id="oqa-Xw-H6d"/>
                                                                         <constraint firstItem="5Xr-Ej-Mfo" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="6" id="u9q-DV-T3b"/>
                                                                     </constraints>
                                                                 </tableCellView>

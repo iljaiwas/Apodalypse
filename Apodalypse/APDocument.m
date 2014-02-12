@@ -177,7 +177,6 @@
 	NSMutableArray	*mutableLines = [self.lines mutableCopy];
 
 	[[self.undoManager prepareWithInvocationTarget:self] removePodLineAtIndex:insertionIndex];
-	[self.undoManager setActionName:NSLocalizedString(@"Add Pod", @"size undo")];
 	
 	[mutableLines insertObject:inPodLine atIndex:insertionIndex];
 	
@@ -192,11 +191,42 @@
 	NSMutableArray	*mutableLines = [self.lines mutableCopy];
 
 	[[self.undoManager prepareWithInvocationTarget:self] insertPodLine:lineToRemove atIndex:inIndex];
-	[self.undoManager setActionName:NSLocalizedString(@"Remove Pod", @"size undo")];
 	
 	[mutableLines removeObject:lineToRemove];
 	self.lines = [NSArray arrayWithArray:mutableLines];
 	[self updateVisibleLines];
+	[self updateTextView];
+}
+
+- (IBAction)togglePodLineState:(id)sender
+{
+	NSUInteger row = [self.podLinesTableView rowForView:sender];
+	
+	APPodLine *podLine = [self.visibleLinesController.arrangedObjects objectAtIndex:row];
+	
+	if (podLine.enabled)
+	{
+		[[self.undoManager prepareWithInvocationTarget:self] disablePodLine:podLine];
+	}
+	else
+	{
+		[[self.undoManager prepareWithInvocationTarget:self] enablePodLine:podLine];
+	}
+	
+	[self updateTextView];
+}
+
+- (void) enablePodLine:(APPodLine*) inPodLine
+{
+	[[self.undoManager prepareWithInvocationTarget:self] disablePodLine:inPodLine];
+	inPodLine.enabled = YES;
+	[self updateTextView];
+}
+
+- (void) disablePodLine:(APPodLine*) inPodLine
+{
+	[[self.undoManager prepareWithInvocationTarget:self] enablePodLine:inPodLine];
+	inPodLine.enabled = NO;
 	[self updateTextView];
 }
 

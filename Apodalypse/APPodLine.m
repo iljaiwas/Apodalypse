@@ -10,9 +10,25 @@
 
 @implementation APPodLine
 
+- (id) init
+{
+	self = [super init];
+	if (self)
+	{
+		_enabled = YES;
+	}
+	return self;
+}
+
 - (NSString*) description
 {
-	NSString *description = [NSString stringWithFormat:@"pod '%@'",self.name];
+	NSString *description = @"";
+	
+	if (!self.enabled)
+	{
+		description = [description stringByAppendingString:@"#"];
+	}
+	description = [description stringByAppendingFormat:@"pod '%@'",self.name];
 	
 	if (self.version)
 	{
@@ -44,17 +60,21 @@
 {
 	if (inCaptureGroupIndex == 1)
 	{
-		self.name = inMatchedString;
+		self.enabled = NO;
 	}
 	else if (inCaptureGroupIndex == 2)
 	{
-		self.versionModifier = inMatchedString;
+		self.name = inMatchedString;
 	}
 	else if (inCaptureGroupIndex == 3)
 	{
-		self.version = inMatchedString;
+		self.versionModifier = inMatchedString;
 	}
 	else if (inCaptureGroupIndex == 4)
+	{
+		self.version = inMatchedString;
+	}
+	else if (inCaptureGroupIndex == 5)
 	{
 		self.comment = inMatchedString;
 	}
