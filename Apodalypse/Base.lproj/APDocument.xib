@@ -18,7 +18,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="133" y="235" width="507" height="413"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <value key="minSize" type="size" width="94" height="86"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="507" height="413"/>
@@ -32,14 +32,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="507" height="197"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <scrollView autohidesScrollers="YES" horizontalLineScroll="36" horizontalPageScroll="10" verticalLineScroll="36" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-sw-MtN">
+                                    <scrollView autohidesScrollers="YES" horizontalLineScroll="62" horizontalPageScroll="10" verticalLineScroll="62" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-sw-MtN">
                                         <rect key="frame" x="0.0" y="0.0" width="507" height="197"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <clipView key="contentView" id="RHr-nw-E86">
                                             <rect key="frame" x="1" y="1" width="505" height="195"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="34" rowSizeStyle="automatic" viewBased="YES" id="i90-0I-VrN">
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" rowSizeStyle="automatic" viewBased="YES" id="i90-0I-VrN">
                                                     <rect key="frame" x="0.0" y="0.0" width="505" height="195"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -73,7 +73,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXx-p6-aIE">
-                                                                            <rect key="frame" x="110" y="4" width="178" height="26"/>
+                                                                            <rect key="frame" x="110" y="4" width="82" height="26"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" numberOfVisibleItems="2" id="QCs-KL-fJ5">
                                                                                 <font key="font" metaFont="system"/>
@@ -88,8 +88,8 @@
                                                                                 <binding destination="jnP-Vx-jUx" name="value" keyPath="objectValue.platform" id="jM7-L6-Ejd"/>
                                                                             </connections>
                                                                         </comboBox>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b90-Sq-L8R">
-                                                                            <rect key="frame" x="296" y="9" width="94" height="17"/>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b90-Sq-L8R">
+                                                                            <rect key="frame" x="330" y="8" width="94" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="90" id="lpP-E8-zic"/>
@@ -101,10 +101,10 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LiD-4x-ZNI">
-                                                                            <rect key="frame" x="396" y="4" width="99" height="26"/>
+                                                                            <rect key="frame" x="430" y="4" width="65" height="26"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="96" id="PNd-GU-u0T"/>
+                                                                                <constraint firstAttribute="width" constant="62" id="5O7-VC-W9R"/>
                                                                             </constraints>
                                                                             <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" numberOfVisibleItems="5" id="26R-hq-nbZ">
                                                                                 <font key="font" metaFont="system"/>
@@ -133,59 +133,166 @@
                                                                     </constraints>
                                                                 </tableCellView>
                                                                 <tableCellView identifier="APPodLine" id="Hrf-Dl-EUg" userLabel="APPodLine">
-                                                                    <rect key="frame" x="1" y="37" width="502" height="34"/>
+                                                                    <rect key="frame" x="1" y="37" width="502" height="60"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-Gw-C5O">
-                                                                            <rect key="frame" x="296" y="9" width="94" height="17"/>
+                                                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ov-jf-TU0">
+                                                                            <rect key="frame" x="11" y="35" width="22" height="18"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="90" id="V00-ip-r8M"/>
-                                                                            </constraints>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Version:" id="jQG-nv-VlT">
+                                                                            <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zB7-Qp-Aix">
+                                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                                <font key="font" metaFont="system"/>
+                                                                            </buttonCell>
+                                                                            <connections>
+                                                                                <action selector="togglePodLineState:" target="-2" id="K8b-2C-LhO"/>
+                                                                                <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.enabled" id="D1e-FF-Lez"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x71-cw-Xkt">
+                                                                            <rect key="frame" x="39" y="36" width="183" height="17"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" title="Label" id="7q9-hV-TSQ">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.name" id="wQx-Wd-4dz"/>
+                                                                            </connections>
+                                                                        </textField>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTW-iI-05f">
+                                                                            <rect key="frame" x="232" y="37" width="51" height="17"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Source:" id="sKE-bb-PVF">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Xr-Ej-Mfo">
-                                                                            <rect key="frame" x="396" y="4" width="99" height="26"/>
+                                                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgj-em-cTB">
+                                                                            <rect key="frame" x="287" y="32" width="210" height="26"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="96" id="8a5-MI-J9h"/>
-                                                                            </constraints>
-                                                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="qgo-PZ-c7i">
+                                                                            <popUpButtonCell key="cell" type="push" title="External Source" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="ag6-TF-2Tn" id="hrk-7F-KNo">
+                                                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                                <connections>
-                                                                                    <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.version" id="fUL-L4-jFG"/>
-                                                                                </connections>
-                                                                            </comboBoxCell>
-                                                                        </comboBox>
-                                                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="rG0-vF-FPn">
-                                                                            <rect key="frame" x="11" y="8" width="281" height="18"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                            <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Y9R-i1-4FV">
-                                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                                <font key="font" metaFont="system"/>
-                                                                            </buttonCell>
+                                                                                <menu key="menu" title="OtherViews" id="Nf8-0E-oDn">
+                                                                                    <items>
+                                                                                        <menuItem title="Pod Spec Repository" id="6TR-bH-fn1"/>
+                                                                                        <menuItem title="External Source" state="on" id="ag6-TF-2Tn"/>
+                                                                                    </items>
+                                                                                </menu>
+                                                                            </popUpButtonCell>
                                                                             <connections>
-                                                                                <action selector="togglePodLineState:" target="-2" id="ra4-XS-tuc"/>
-                                                                                <binding destination="Hrf-Dl-EUg" name="title" keyPath="objectValue.name" id="I3F-gb-6Ux"/>
-                                                                                <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.enabled" id="3Be-r9-9cH"/>
+                                                                                <binding destination="Hrf-Dl-EUg" name="selectedIndex" keyPath="objectValue.source" id="wJb-gx-PEI"/>
                                                                             </connections>
-                                                                        </button>
+                                                                        </popUpButton>
+                                                                        <tabView ambiguous="YES" misplaced="YES" drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="4AR-g2-Ygk">
+                                                                            <rect key="frame" x="216" y="5" width="278" height="24"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                            <tabViewItems>
+                                                                                <tabViewItem label="Tab" identifier="1" id="TNW-zH-qZb">
+                                                                                    <view key="view" id="TV8-Au-Sur">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="278" height="24"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <subviews>
+                                                                                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FoM-YQ-HH9">
+                                                                                                <rect key="frame" x="215" y="1" width="61" height="22"/>
+                                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="jmI-ih-0VT">
+                                                                                                    <font key="font" metaFont="system"/>
+                                                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                                </textFieldCell>
+                                                                                                <connections>
+                                                                                                    <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.version" id="8ym-6t-gLj"/>
+                                                                                                </connections>
+                                                                                            </textField>
+                                                                                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4i-gO-v8Q">
+                                                                                                <rect key="frame" x="72" y="-1" width="92" height="26"/>
+                                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="o4g-Sb-GsE">
+                                                                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                                                    <font key="font" metaFont="system"/>
+                                                                                                    <menu key="menu" title="OtherViews" id="lK7-tb-URT">
+                                                                                                        <items>
+                                                                                                            <menuItem title="Latest" id="82M-MU-ssq" userLabel="Latest"/>
+                                                                                                            <menuItem title="~>" id="UYN-Xb-t9N"/>
+                                                                                                            <menuItem title=">=" id="tz5-bY-fHg"/>
+                                                                                                            <menuItem title=">" id="E3o-tn-ItP"/>
+                                                                                                            <menuItem title="&lt;=" id="RTT-d6-3l8"/>
+                                                                                                            <menuItem title="&lt;" id="FTI-yr-p68"/>
+                                                                                                        </items>
+                                                                                                    </menu>
+                                                                                                </popUpButtonCell>
+                                                                                            </popUpButton>
+                                                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-pm-bQh">
+                                                                                                <rect key="frame" x="12" y="4" width="55" height="17"/>
+                                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version:" id="Xr0-Pr-fVy">
+                                                                                                    <font key="font" metaFont="system"/>
+                                                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                                                </textFieldCell>
+                                                                                            </textField>
+                                                                                        </subviews>
+                                                                                    </view>
+                                                                                </tabViewItem>
+                                                                                <tabViewItem label="View" identifier="2" id="BOW-t2-sAK">
+                                                                                    <view key="view" ambiguous="YES" id="Yg8-5C-N0p">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="278" height="24"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <subviews>
+                                                                                            <popUpButton verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eb-mX-MS1" userLabel="External Source Type">
+                                                                                                <rect key="frame" x="18" y="-1" width="53" height="26"/>
+                                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="asa-5Z-U0h" userLabel="externalSourceType">
+                                                                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                                                    <font key="font" metaFont="system"/>
+                                                                                                    <menu key="menu" title="OtherViews" id="f5g-EC-3OX">
+                                                                                                        <items>
+                                                                                                            <menuItem title="git" id="1cg-3D-HoC"/>
+                                                                                                            <menuItem title="svn" id="Bcb-Cs-jKu"/>
+                                                                                                            <menuItem title="hg" id="tjE-Sd-Jk5"/>
+                                                                                                            <menuItem title="bzr" id="txk-NF-XhU"/>
+                                                                                                            <menuItem title="path" id="rpC-4m-ojn"/>
+                                                                                                            <menuItem title="podspec" id="4By-cq-Fml"/>
+                                                                                                        </items>
+                                                                                                    </menu>
+                                                                                                </popUpButtonCell>
+                                                                                                <connections>
+                                                                                                    <binding destination="Hrf-Dl-EUg" name="selectedValue" keyPath="objectValue.externalSourceType" id="Oga-Hk-Wfa"/>
+                                                                                                </connections>
+                                                                                            </popUpButton>
+                                                                                            <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgs-j1-DuF">
+                                                                                                <rect key="frame" x="72" y="1" width="206" height="22"/>
+                                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="oh4-XJ-iy4">
+                                                                                                    <font key="font" metaFont="system"/>
+                                                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                                </textFieldCell>
+                                                                                                <connections>
+                                                                                                    <binding destination="Hrf-Dl-EUg" name="value" keyPath="objectValue.externalSourceURL" id="W3r-4y-ukh"/>
+                                                                                                </connections>
+                                                                                            </textField>
+                                                                                        </subviews>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="trailing" secondItem="jgs-j1-DuF" secondAttribute="trailing" id="Ax9-BB-cPg"/>
+                                                                                            <constraint firstItem="jgs-j1-DuF" firstAttribute="leading" secondItem="6eb-mX-MS1" secondAttribute="trailing" constant="4" id="Sgn-EC-qGE"/>
+                                                                                            <constraint firstItem="6eb-mX-MS1" firstAttribute="leading" secondItem="Yg8-5C-N0p" secondAttribute="leading" constant="20" id="pm7-lL-8XA"/>
+                                                                                        </constraints>
+                                                                                    </view>
+                                                                                </tabViewItem>
+                                                                            </tabViewItems>
+                                                                            <connections>
+                                                                                <binding destination="Hrf-Dl-EUg" name="selectedIndex" keyPath="objectValue.source" id="SoW-9U-nha"/>
+                                                                            </connections>
+                                                                        </tabView>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="Vna-Gw-C5O" firstAttribute="leading" secondItem="rG0-vF-FPn" secondAttribute="trailing" constant="8" id="5ey-nH-jef"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="rG0-vF-FPn" secondAttribute="bottom" constant="10" id="7nO-8k-ps9"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="5Xr-Ej-Mfo" secondAttribute="trailing" constant="10" id="AHw-AM-y9i"/>
-                                                                        <constraint firstItem="5Xr-Ej-Mfo" firstAttribute="leading" secondItem="Vna-Gw-C5O" secondAttribute="trailing" constant="8" id="ZGl-lw-ROf"/>
-                                                                        <constraint firstItem="Vna-Gw-C5O" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="8" id="nKj-OJ-uay"/>
-                                                                        <constraint firstItem="rG0-vF-FPn" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="10" id="okT-4k-dZA"/>
-                                                                        <constraint firstItem="rG0-vF-FPn" firstAttribute="leading" secondItem="Hrf-Dl-EUg" secondAttribute="leading" constant="13" id="oqa-Xw-H6d"/>
-                                                                        <constraint firstItem="5Xr-Ej-Mfo" firstAttribute="top" secondItem="Hrf-Dl-EUg" secondAttribute="top" constant="6" id="u9q-DV-T3b"/>
+                                                                        <constraint firstItem="4AR-g2-Ygk" firstAttribute="leading" secondItem="Hrf-Dl-EUg" secondAttribute="leading" constant="216" id="D9L-0e-dlA"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="4AR-g2-Ygk" secondAttribute="trailing" constant="8" id="JPg-4E-jXt"/>
                                                                     </constraints>
                                                                 </tableCellView>
                                                             </prototypeCellViews>
@@ -273,6 +380,20 @@
                     <constraint firstAttribute="bottom" secondItem="kFf-nS-md3" secondAttribute="bottom" id="Y0s-E1-Ttp"/>
                 </constraints>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="5D30609C-DB76-4A64-B423-1B9773FC48B6" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="5KE-ZQ-QWk">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="r9I-cg-gf1"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="XGr-uM-NoY"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="Dl2-z2-14d"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="QHJ-2k-SQk"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="G0n-aH-7dF"/>
+                    <toolbarItem implicitItemIdentifier="B41E06FF-133A-4878-B169-EC7A1BAE0477" label="Pod Update" paletteLabel="Pod Update" tag="-1" image="NSRefreshFreestandingTemplate" id="hS4-14-Icp"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="hS4-14-Icp"/>
+                    <toolbarItem reference="G0n-aH-7dF"/>
+                </defaultToolbarItems>
+            </toolbar>
             <connections>
                 <outlet property="delegate" destination="-2" id="17"/>
             </connections>
@@ -280,4 +401,7 @@
         <customObject id="-3" userLabel="Application"/>
         <arrayController objectClassName="APLine" avoidsEmptySelection="NO" id="ve1-H8-UCA" userLabel="VisibleLinesController"/>
     </objects>
+    <resources>
+        <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
+    </resources>
 </document>

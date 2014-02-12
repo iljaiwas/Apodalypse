@@ -30,17 +30,28 @@
 	}
 	description = [description stringByAppendingFormat:@"pod '%@'",self.name];
 	
-	if (self.version)
+	if (self.source == APPodSourceMasterRepo)
 	{
-		description = [description stringByAppendingString:@", '"];
-
-		if (self.versionModifier)
+		if (self.version)
 		{
-			description = [description stringByAppendingString:self.versionModifier];
-			description = [description stringByAppendingString:@" "];
+			description = [description stringByAppendingString:@", '"];
+
+			if (self.versionModifier)
+			{
+				description = [description stringByAppendingString:self.versionModifier];
+				description = [description stringByAppendingString:@" "];
+			}
+			
+			description = [description stringByAppendingString:self.version];
+			description = [description stringByAppendingString:@"'"];
 		}
-		
-		description = [description stringByAppendingString:self.version];
+	}
+	else if (self.source == APPodSourceExternal)
+	{
+		description = [description stringByAppendingString:@", :"];
+		description = [description stringByAppendingString:self.externalSourceType];
+		description = [description stringByAppendingString:@" => '"];
+		description = [description stringByAppendingString:self.externalSourceURL];
 		description = [description stringByAppendingString:@"'"];
 	}
 	if (self.comment)
@@ -75,6 +86,15 @@
 		self.version = inMatchedString;
 	}
 	else if (inCaptureGroupIndex == 5)
+	{
+		self.source = APPodSourceExternal;
+		self.externalSourceType = inMatchedString;
+	}
+	else if (inCaptureGroupIndex == 6)
+	{
+		self.externalSourceURL = inMatchedString;
+	}
+	else if (inCaptureGroupIndex == 7)
 	{
 		self.comment = inMatchedString;
 	}
