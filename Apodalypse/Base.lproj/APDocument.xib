@@ -278,6 +278,6 @@
             </connections>
         </window>
         <customObject id="-3" userLabel="Application"/>
-        <arrayController id="ve1-H8-UCA" userLabel="VisibleLinesController"/>
+        <arrayController objectClassName="APLine" avoidsEmptySelection="NO" id="ve1-H8-UCA" userLabel="VisibleLinesController"/>
     </objects>
 </document>

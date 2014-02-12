@@ -67,6 +67,15 @@
 	[self updateVisibleLines];
 	
 	[self.podLinesTableView registerForDraggedTypes:@[@"podSpecJSON"]];
+	
+	if ([self.visibleLinesController.arrangedObjects count] > 1)
+	{
+		[self.visibleLinesController setSelectionIndex:1];
+	}
+	else
+	{
+		[self.visibleLinesController setSelectedObjects:@[]];
+	}
 }
 
 + (BOOL)autosavesInPlace
@@ -228,6 +237,34 @@
 	[[self.undoManager prepareWithInvocationTarget:self] enablePodLine:inPodLine];
 	inPodLine.enabled = NO;
 	[self updateTextView];
+}
+
+- (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex
+{
+	if (rowIndex == 0) // platform row shouldn't be selectable
+		return NO;
+	
+	return YES;
+}
+
+- (IBAction)delete:(id)sender
+{
+	for (APPodLine *podLine in [self.visibleLinesController selectedObjects])
+	{
+		NSUInteger index = [self.lines indexOfObject:podLine];
+		
+		[self removePodLineAtIndex:index];
+	}
+}
+
+- (BOOL) validateMenuItem:(NSMenuItem *)menuItem
+{
+	if ([menuItem action] == @selector(delete:))
+	{
+		return [[self.visibleLinesController selectedObjects] count] > 0;
+	}
+	
+	return [super validateMenuItem:menuItem];
 }
 
 @end
