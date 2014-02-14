@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <HockeySDK/HockeySDK.h>
 
-@interface APAppDelegate : NSObject
+
+@interface APAppDelegate : NSObject <BITHockeyManagerDelegate>
 
 - (IBAction)showPodCatalogWindow:(id)sender;
 

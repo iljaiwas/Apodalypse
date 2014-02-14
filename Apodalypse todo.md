@@ -16,7 +16,7 @@
 
 ## PodSpec Catalog
 * show component author
-* show component platform
+* show component platforms
 * show GitHub star rating for components hosted on GitHub
 	* most likely need to ask for users GitHub credentials to work around GitHub call limits for unauthenticated calls
 * support for Favorites

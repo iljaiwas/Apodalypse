@@ -27,4 +27,12 @@
 	[self.catalogWindowController showWindow:sender];
 }
 
+- (void) applicationDidFinishLaunching:(NSNotification*) inNotification
+{
+	[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"a9edf58be743101ca4f8b103b73c2781"
+														companyName:@"iwascoding GmbH"
+														   delegate:self];
+	[[BITHockeyManager sharedHockeyManager] startManager];
+}
+	
 @end
