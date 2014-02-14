@@ -256,6 +256,18 @@
 		[self removePodLineAtIndex:index];
 	}
 }
+	
+- (IBAction)versionModifierPopupChanged:(id)sender
+{
+	[self updateTextView];
+	[self updateChangeCount:NSChangeDone];
+}
+	
+- (IBAction)externalSourceTypePopupChanged:(id)sender
+{
+	[self updateTextView];
+	[self updateChangeCount:NSChangeDone];
+}
 
 - (BOOL) validateMenuItem:(NSMenuItem *)menuItem
 {
@@ -265,6 +277,18 @@
 	}
 	
 	return [super validateMenuItem:menuItem];
+}
+	
+- (void) controlTextDidChange:(NSNotification *)inNotification
+{
+	NSTextField *sender = [inNotification object];
+	
+	if ([sender tag] == 1 ||
+		[sender tag] == 2) // PodSpec version field
+	{
+		[self updateTextView];
+		[self updateChangeCount:NSChangeDone];
+	}
 }
 
 @end

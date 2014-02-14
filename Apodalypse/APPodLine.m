@@ -32,13 +32,13 @@
 	
 	if (self.source == APPodSourceMasterRepo)
 	{
-		if (self.version)
+		if (self.version.length && self.versionModifier)
 		{
 			description = [description stringByAppendingString:@", '"];
 
 			if (self.versionModifier)
 			{
-				description = [description stringByAppendingString:self.versionModifier];
+				description = [description stringByAppendingString:[[self class] stringForVersionModifier:self.versionModifier]];
 				description = [description stringByAppendingString:@" "];
 			}
 			
@@ -79,7 +79,7 @@
 	}
 	else if (inCaptureGroupIndex == 3)
 	{
-		self.versionModifier = inMatchedString;
+		self.versionModifier = [[self class] versionModifierForString:inMatchedString];
 	}
 	else if (inCaptureGroupIndex == 4)
 	{
@@ -98,7 +98,51 @@
 	{
 		self.comment = inMatchedString;
 	}
+}
+	
++ (APPodVersionModifier) versionModifierForString:(NSString*) inVersionModifierString
+{
+	if ([inVersionModifierString isEqualToString:@"~>"])
+		return APRestrictToVersionSeries;
+	else if ([inVersionModifierString isEqualToString:@">="])
+		return APGreaterOurEqual;
+	else if ([inVersionModifierString isEqualToString:@">"])
+		return APGreaterThan;
+	else if ([inVersionModifierString isEqualToString:@"<="])
+		return APLessOrEqual;
+	else if ([inVersionModifierString isEqualToString:@"<"])
+		return APLessThan;
+	return APUseLatest;
+}
 
++ (NSString*) stringForVersionModifier:(APPodVersionModifier) inVersionModifier
+{
+	switch (inVersionModifier) {
+		
+		case APUseLatest:
+			return @"";
+		
+		case APRestrictToVersionSeries:
+			return @"~>";
+		break;
+		
+		case APGreaterOurEqual:
+			return @">=";
+		break;
+		
+		case APGreaterThan:
+			return @">";
+		break;
+		
+		case APLessOrEqual:
+			return @"<=";
+		break;
+		
+		case APLessThan:
+			return @"<";
+		break;
+	}
+	return nil;
 }
 
 @end

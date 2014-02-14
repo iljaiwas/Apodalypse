@@ -11,5 +11,8 @@
 @interface APDocument : NSDocument
 
 @property (strong) IBOutlet NSTextView *textView;
+	
+- (IBAction)versionModifierPopupChanged:(id)sender;
+- (IBAction)externalSourceTypePopupChanged:(id)sender;
 
 @end

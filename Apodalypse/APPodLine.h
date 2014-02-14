@@ -13,14 +13,23 @@ typedef enum APPodSource {
 	APPodSourceExternal,
 	} APPodSource;
 
+typedef enum APPodVersionModifier {
+	APUseLatest = 0,			// none given
+	APRestrictToVersionSeries,  // ~>
+	APGreaterOurEqual,
+	APGreaterThan,
+	APLessOrEqual,
+	APLessThan,
+	} APPodVersionModifier;
+
 @interface APPodLine : APRegexpLine
 
-@property (strong) NSString			*name;
-@property (strong) NSString			*versionModifier;
-@property (strong) NSString			*version;
-@property (assign) BOOL				enabled;
-@property (assign) APPodSource		source;
-@property (strong) NSString			*externalSourceType;
-@property (strong) NSString			*externalSourceURL;
+@property (strong) NSString				*name;
+@property (assign) APPodVersionModifier	versionModifier;
+@property (strong) NSString				*version;
+@property (assign) BOOL					enabled;
+@property (assign) APPodSource			source;
+@property (strong) NSString				*externalSourceType;
+@property (strong) NSString				*externalSourceURL;
 
 @end
