@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8D45F2B957544C59EF4B77C"
+               BlueprintIdentifier = "E7F711695C224EC4BFE68EA6"
                BuildableName = "libPods.a"
                BlueprintName = "Pods"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2C1D1E16E00E4317A49263F6"
+               BlueprintIdentifier = "766147F28887497CB49371C2"
                BuildableName = "libPods-AFNetworking.a"
                BlueprintName = "Pods-AFNetworking"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AD92283B49AA48CF8CE4BC89"
+               BlueprintIdentifier = "95AF7C803FB447D6B5E30999"
                BuildableName = "libPods-HockeySDK-Mac.a"
                BlueprintName = "Pods-HockeySDK-Mac"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2DFE7C1348994940BF4C5C63"
+               BlueprintIdentifier = "DBC1EBF1F1594CA695943891"
                BuildableName = "libPods-MACollectionUtilities.a"
                BlueprintName = "Pods-MACollectionUtilities"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
