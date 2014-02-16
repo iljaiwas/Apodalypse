@@ -1,0 +1,4 @@
+language: objective-c
+before_install: gem install cocoapods
+xcode_workspace: Apodalypse.xcworkspace
+xcode_scheme: Apodalypse
