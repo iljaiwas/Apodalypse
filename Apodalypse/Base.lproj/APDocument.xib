@@ -460,10 +460,16 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="QHJ-2k-SQk"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="G0n-aH-7dF"/>
                     <toolbarItem implicitItemIdentifier="B41E06FF-133A-4878-B169-EC7A1BAE0477" label="Pod Update" paletteLabel="Pod Update" tag="-1" image="NSRefreshFreestandingTemplate" id="hS4-14-Icp"/>
+                    <toolbarItem implicitItemIdentifier="59D1B807-A4AA-4800-A7D5-F323A2315E5C" label="Pod Catalog" paletteLabel="Pod Catalog" tag="-1" image="NSNetwork" id="eqh-9V-YXK">
+                        <connections>
+                            <action selector="showPodCatalogWindow:" target="-1" id="jf4-4g-r1P"/>
+                        </connections>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="hS4-14-Icp"/>
                     <toolbarItem reference="G0n-aH-7dF"/>
+                    <toolbarItem reference="eqh-9V-YXK"/>
                 </defaultToolbarItems>
             </toolbar>
             <connections>
@@ -474,6 +480,7 @@
         <arrayController objectClassName="APLine" avoidsEmptySelection="NO" id="ve1-H8-UCA" userLabel="VisibleLinesController"/>
     </objects>
     <resources>
+        <image name="NSNetwork" width="32" height="32"/>
         <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
     </resources>
 </document>
