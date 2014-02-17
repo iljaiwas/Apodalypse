@@ -12,19 +12,25 @@
 
 - (NSString*) description
 {
-	NSString *description = [NSString stringWithFormat:@"platform :%@, '%@'\n", self.platform, self.sdkVersion];
+	NSString *description = [NSString stringWithFormat:@"platform :%@", self.platform];
+	
+	if (self.sdkVersion.length)
+	{
+		description = [description stringByAppendingFormat:@", '%@'", self.sdkVersion];
+	}
 	
 	if (self.comment)
 	{
 		description = [description stringByAppendingString:self.comment];
 	}
+	description = [description stringByAppendingString:@"\n"];
 	
 	return description;
 }
 
 - (BOOL) isValid
 {
-	return (self.platform.length && self.sdkVersion.length);
+	return (self.platform.length);
 }
 
 - (void) setString:(NSString*) inMatchedString matchingCaptureGroupAtIndex:(NSInteger) inCaptureGroupIndex
