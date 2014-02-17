@@ -284,11 +284,25 @@
 	NSTextField *sender = [inNotification object];
 	
 	if ([sender tag] == 1 ||
-		[sender tag] == 2) // PodSpec version field
+		[sender tag] == 2 || // PodSpec version field
+		[sender tag] == 3 || // platform or sdk
+		[sender tag] == 4)	 // version combo box
 	{
 		[self updateTextView];
 		[self updateChangeCount:NSChangeDone];
 	}
+}
+
+- (void)comboBoxSelectionDidChange:(NSNotification *)notification
+{
+	double delayInSeconds = 0.1;
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		[self updateTextView];
+		[self updateChangeCount:NSChangeDone];
+	});
+	
+
 }
 
 @end

@@ -76,7 +76,7 @@
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YXx-p6-aIE">
+                                                                        <comboBox verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="YXx-p6-aIE">
                                                                             <rect key="frame" x="110" y="4" width="82" height="26"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <constraints>
@@ -93,6 +93,7 @@
                                                                             </comboBoxCell>
                                                                             <connections>
                                                                                 <binding destination="jnP-Vx-jUx" name="value" keyPath="objectValue.platform" id="jM7-L6-Ejd"/>
+                                                                                <outlet property="delegate" destination="-2" id="SOy-X2-L3e"/>
                                                                             </connections>
                                                                         </comboBox>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b90-Sq-L8R">
@@ -107,7 +108,7 @@
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LiD-4x-ZNI">
+                                                                        <comboBox verticalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="LiD-4x-ZNI">
                                                                             <rect key="frame" x="321" y="4" width="65" height="26"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <constraints>
@@ -132,6 +133,7 @@
                                                                             </comboBoxCell>
                                                                             <connections>
                                                                                 <binding destination="jnP-Vx-jUx" name="value" keyPath="objectValue.sdkVersion" id="mix-72-Pcp"/>
+                                                                                <outlet property="delegate" destination="-2" id="CxN-ek-A7R"/>
                                                                             </connections>
                                                                         </comboBox>
                                                                     </subviews>
