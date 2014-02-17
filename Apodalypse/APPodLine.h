@@ -14,7 +14,8 @@ typedef enum APPodSource {
 	} APPodSource;
 
 typedef enum APPodVersionModifier {
-	APUseLatest = 0,			// none given
+	APUseLatest = 0,			// no version given
+	APUseExact,					// no version modfier, but version specified
 	APRestrictToVersionSeries,  // ~>
 	APGreaterOurEqual,
 	APGreaterThan,

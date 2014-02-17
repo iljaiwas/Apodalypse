@@ -84,6 +84,10 @@
 	else if (inCaptureGroupIndex == 4)
 	{
 		self.version = inMatchedString;
+		if (self.versionModifier == 0)
+		{
+			self.versionModifier = APUseExact;
+		}
 	}
 	else if (inCaptureGroupIndex == 5)
 	{
@@ -120,6 +124,7 @@
 	switch (inVersionModifier) {
 		
 		case APUseLatest:
+		case APUseExact:
 			return @"";
 		
 		case APRestrictToVersionSeries:

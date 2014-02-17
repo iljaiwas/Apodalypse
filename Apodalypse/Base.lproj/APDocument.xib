@@ -253,13 +253,14 @@
                                                                                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4i-gO-v8Q">
                                                                                                 <rect key="frame" x="72" y="-1" width="92" height="26"/>
                                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="o4g-Sb-GsE">
+                                                                                                <popUpButtonCell key="cell" type="push" title="==" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="UYN-Xb-t9N" id="o4g-Sb-GsE">
                                                                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                                                     <font key="font" metaFont="menu"/>
                                                                                                     <menu key="menu" title="OtherViews" id="lK7-tb-URT">
                                                                                                         <items>
                                                                                                             <menuItem title="Latest" id="82M-MU-ssq" userLabel="Latest"/>
-                                                                                                            <menuItem title="~>" id="UYN-Xb-t9N"/>
+                                                                                                            <menuItem title="==" state="on" id="UYN-Xb-t9N"/>
+                                                                                                            <menuItem title="~>" id="xSa-l8-sMj"/>
                                                                                                             <menuItem title=">=" id="tz5-bY-fHg"/>
                                                                                                             <menuItem title=">" id="E3o-tn-ItP"/>
                                                                                                             <menuItem title="&lt;=" id="RTT-d6-3l8"/>
