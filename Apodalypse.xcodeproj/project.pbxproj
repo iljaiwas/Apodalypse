@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3BAFA10AFFC84358BED46227 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5403A30E94E1B951FE889 /* libPods.a */; };
+		4D7680F418B5514500A4278D /* APTaskWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7680F218B5514500A4278D /* APTaskWindowController.m */; };
+		4D7680F518B5514500A4278D /* APTaskWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7680F318B5514500A4278D /* APTaskWindowController.xib */; };
 		4DEAEA4F18A03C560071482E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEAEA4E18A03C560071482E /* Cocoa.framework */; };
 		4DEAEA5918A03C560071482E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DEAEA5718A03C560071482E /* InfoPlist.strings */; };
 		4DEAEA5B18A03C560071482E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEAEA5A18A03C560071482E /* main.m */; };
@@ -45,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D7680F118B5514500A4278D /* APTaskWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTaskWindowController.h; sourceTree = "<group>"; };
+		4D7680F218B5514500A4278D /* APTaskWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APTaskWindowController.m; sourceTree = "<group>"; };
+		4D7680F318B5514500A4278D /* APTaskWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APTaskWindowController.xib; sourceTree = "<group>"; };
 		4DEAEA4B18A03C560071482E /* Apodalypse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apodalypse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEAEA4E18A03C560071482E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4DEAEA5118A03C560071482E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -170,6 +175,9 @@
 				4DEAEAD418A57FB30071482E /* Data Model */,
 				4DEAEACE18A52B5A0071482E /* APPodfileParser.h */,
 				4DEAEACF18A52B5A0071482E /* APPodfileParser.m */,
+				4D7680F118B5514500A4278D /* APTaskWindowController.h */,
+				4D7680F218B5514500A4278D /* APTaskWindowController.m */,
+				4D7680F318B5514500A4278D /* APTaskWindowController.xib */,
 			);
 			path = Apodalypse;
 			sourceTree = "<group>";
@@ -311,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEAEA5918A03C560071482E /* InfoPlist.strings in Resources */,
+				4D7680F518B5514500A4278D /* APTaskWindowController.xib in Resources */,
 				4DEAEA6A18A03C560071482E /* Images.xcassets in Resources */,
 				4DEAEA6518A03C560071482E /* APDocument.xib in Resources */,
 				4DEAEA5F18A03C560071482E /* Credits.rtf in Resources */,
@@ -377,6 +386,7 @@
 				4DEAEA5B18A03C560071482E /* main.m in Sources */,
 				4DEAEAB818A3D0670071482E /* APLine.m in Sources */,
 				4DEAEA6218A03C560071482E /* APDocument.m in Sources */,
+				4D7680F418B5514500A4278D /* APTaskWindowController.m in Sources */,
 				4DEAEADC18A590280071482E /* APCommentLine.m in Sources */,
 				4DEAEA8C18A03FC60071482E /* APAppDelegate.m in Sources */,
 				4DEAEAD718A57FD50071482E /* APRegexpLine.m in Sources */,

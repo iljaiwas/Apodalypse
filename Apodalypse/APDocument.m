@@ -11,6 +11,7 @@
 #import "APPodfileParser.h"
 #import "APPlatformLine.h"
 #import "APPodLine.h"
+#import "APTaskWindowController.h"
 
 #import "MACollectionUtilities.h"
 
@@ -301,8 +302,58 @@
 		[self updateTextView];
 		[self updateChangeCount:NSChangeDone];
 	});
-	
+}
 
+- (IBAction)podInstallAction:(id)sender
+{
+	NSURL *documentURL = [self fileURL];
+	
+	if (nil == documentURL)
+	{
+		[self showNotDocumentNotSavedMesssage];
+	}
+	
+	[self saveDocument:nil];
+	
+	NSTask *podTask = [[NSTask alloc] init];
+	
+	[podTask setCurrentDirectoryPath:[[[self fileURL] path] stringByDeletingLastPathComponent]];
+	[podTask setLaunchPath:@"/usr/local/bin/pod"];
+	[podTask setArguments:@[@"install"]];
+	
+	[APTaskWindowController runSheetForTask:podTask parentWindow:self.windowForSheet];
+}
+
+- (IBAction)podUpdateAction:(id)sender
+{
+	NSURL *documentURL = [self fileURL];
+	
+	if (nil == documentURL)
+	{
+		[self showNotDocumentNotSavedMesssage];
+	}
+	
+	[self saveDocument:nil];
+	
+	NSTask *podTask = [[NSTask alloc] init];
+	
+	[podTask setCurrentDirectoryPath:[[[self fileURL] path] stringByDeletingLastPathComponent]];
+	[podTask setLaunchPath:@"/usr/local/bin/pod"];
+	[podTask setArguments:@[@"update"]];
+	
+	[APTaskWindowController runSheetForTask:podTask parentWindow:self.windowForSheet];
+}
+
+- (void) showNotDocumentNotSavedMesssage
+{
+	NSAlert *alert = [NSAlert alertWithMessageText:@"Your document needs to be saved before running this command."
+									 defaultButton:@"OK"
+								   alternateButton:nil
+									   otherButton:nil
+						 informativeTextWithFormat:@""];
+	
+	[alert beginSheetModalForWindow:self.windowForSheet completionHandler:^(NSModalResponse returnCode) {
+	}];
 }
 
 @end

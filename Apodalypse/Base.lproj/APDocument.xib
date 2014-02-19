@@ -462,7 +462,16 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="Dl2-z2-14d"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="QHJ-2k-SQk"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="G0n-aH-7dF"/>
-                    <toolbarItem implicitItemIdentifier="B41E06FF-133A-4878-B169-EC7A1BAE0477" label="Pod Update" paletteLabel="Pod Update" tag="-1" image="NSRefreshFreestandingTemplate" id="hS4-14-Icp"/>
+                    <toolbarItem implicitItemIdentifier="B41E06FF-133A-4878-B169-EC7A1BAE0477" label="Pod Install" paletteLabel="Pod Install" tag="-1" image="NSRefreshFreestandingTemplate" id="hS4-14-Icp">
+                        <connections>
+                            <action selector="podInstallAction:" target="-2" id="jVm-aL-v8a"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="BB6ACDE3-F695-4407-A405-0C25F9B9D9F8" label="Pod Update" paletteLabel="Pod Update" tag="-1" image="NSRefreshFreestandingTemplate" id="kvl-U0-04v">
+                        <connections>
+                            <action selector="podUpdateAction:" target="-2" id="CaJ-MT-WaJ"/>
+                        </connections>
+                    </toolbarItem>
                     <toolbarItem implicitItemIdentifier="59D1B807-A4AA-4800-A7D5-F323A2315E5C" label="Pod Catalog" paletteLabel="Pod Catalog" tag="-1" image="NSNetwork" id="eqh-9V-YXK">
                         <connections>
                             <action selector="showPodCatalogWindow:" target="-1" id="jf4-4g-r1P"/>
@@ -471,6 +480,7 @@
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="hS4-14-Icp"/>
+                    <toolbarItem reference="kvl-U0-04v"/>
                     <toolbarItem reference="G0n-aH-7dF"/>
                     <toolbarItem reference="eqh-9V-YXK"/>
                 </defaultToolbarItems>
